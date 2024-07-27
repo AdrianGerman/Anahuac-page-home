@@ -1,0 +1,111 @@
+* {
+  font-family: Arial, Verdana, Geneva, sans-serif;
+}
+
+body {
+  background-color: #ffff;
+  background-image: url("./img/background-anahuac.webp");
+  background-position: center top;
+  background-attachment: Fixed;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.main_area {
+  border-radius: 0px 0px 0px 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0px;
+  margin-top: 15px;
+  width: 550px;
+  border: #000000 solid 1px;
+  /* text-align: center; */
+}
+
+.logo-container {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.logo_anahuac {
+  max-width: 90%;
+  max-height: 180px;
+  height: auto;
+  padding: 20px 0px 10px 0px;
+}
+
+.text-container {
+  font-weight: bold;
+  font-size: 10px;
+  color: #e06023;
+}
+
+.wifi-text-container {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e06023;
+}
+
+.form-container {
+  padding: 0 12px 0 12px;
+  margin-bottom: 12px;
+}
+
+.input-submit {
+  background-color: #e06023;
+  border: 0px solid #c2c2c2;
+  display: inline-block;
+  color: #000000;
+  font-family: Arial, Verdana, Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #e69138;
+  cursor: pointer;
+  width: 100%;
+}
+
+.input-submit:hover {
+  background-color: #e69138;
+  cursor: pointer;
+}
+
+.chk {
+  margin-top: 0px;
+  line-height: 26px;
+  color: #e06023;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.chkboxm {
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+}
