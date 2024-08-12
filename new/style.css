@@ -6,7 +6,7 @@
 
 body {
   background-color: #ffff;
-  background-image: url("./img/1.svg");
+  background-image: url('./img/1.svg');
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -15,17 +15,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80vw;
+  display: flex;
+  flex-direction: row;
+
+  /* width: 80vw; */
+  /* min-width: 320px; */
   max-width: 1200px;
   height: 80dvh;
   max-height: 900px;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
@@ -37,6 +38,7 @@ main {
   height: 80dvh;
   img {
     max-width: 60%;
+    min-width: 20%;
   }
 }
 
@@ -77,7 +79,54 @@ section:nth-of-type(2) {
 }
 
 .info-text {
-  height: 10dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alinea el contenido hacia abajo */
+  height: 100%; /* Ocupa toda la altura disponible */
   text-align: end;
-  margin-top: -1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+  main {
+    width: 90%;
+    flex-direction: column;
+    height: 80dvh;
+  }
+
+  section:nth-of-type(2) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .logo-section {
+    height: 30dvh;
+    margin: 1rem;
+    img {
+      width: 30%;
+    }
+  }
+  .text-section {
+    justify-content: start;
+    height: 30dvh;
+    h1 {
+      font-size: 44px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    input {
+      margin-bottom: 0;
+    }
+  }
+  .info-text {
+    /* height: 20dvh; */
+    margin-top: -1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-section {
+    img {
+      width: 50%;
+    }
+  }
 }
