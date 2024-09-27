@@ -116,6 +116,74 @@
         font-size: 18px;
       }
 
+      #openModal {
+        text-decoration: underline;
+      }
+
+      .modal {
+        display: none;
+      }
+
+      .modal:target {
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-background {
+        cursor: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      .modal-content {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .modal-content h2 strong {
+        color: #ff5901;
+      }
+
+      .modal-content h2,
+      .modal-content p {
+        margin-bottom: 1rem;
+      }
+
+      .close {
+        color: #fff;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #eee;
+      }
+
+      .modal:target {
+        display: flex;
+      }
+
       @media (max-width: 850px) {
         body {
           background-position: 85% 50%;
@@ -210,13 +278,34 @@
             <p>
               Si tienes problemas para conectarte a la <br />
               red inalámbrica, comunícate a:<br />
-              <a href="mailto:sistemas.uap@anahuac.mx">sistemas.uap@anahuac.mx</a><br />
+              <a href="mailto:sistemas.uap@anahuac.mx"
+                >sistemas.uap@anahuac.mx</a
+              ><br />
               <a href="tel:2221691069">Tel. 222 169 1069</a> ext. 361 y 541
             </p>
+            <!-- ------------------------------------------ -->
+            <section>
+              <a href="#miModal" id="openModal">Aviso de privacidad</a>
+
+              <div id="miModal" class="modal">
+                <a href="#" class="modal-background"></a>
+                <div class="modal-content">
+                  <a href="#" class="close">&times;</a>
+                  <h2>Invitados <strong>UAP</strong></h2>
+                  <h2>Términos y condiciones</h2>
+                  <p>
+                    <strong>Usuario: </strong>Al aceptar los términos y
+                    condiciones se autoriza la recopilación de tus datos, mismos
+                    que podrían ser utilizados con fines institucionales
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- ------------------------------------------ -->
           </div>
         </section>
       </section>
     </main>
-    $MERAKI:MERAKI_JS$
+    <!-- $MERAKI:MERAKI_JS$ -->
   </body>
 </html>
